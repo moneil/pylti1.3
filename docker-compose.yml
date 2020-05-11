@@ -1,0 +1,12 @@
+version: '3'
+services:
+  game:
+    image: blackboardhub.ddns.net/bbdn/pylti1p3-game-example:1.0
+    container_name: pylti1p3-flask-example
+    restart: always
+    volumes:
+      - ./configs:/configs
+    ports:
+      - 9001:9001
+    working_dir: /game
+    command: python app.py
